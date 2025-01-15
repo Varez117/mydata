@@ -460,6 +460,7 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tres columnas por defecto */
     gap: 20px; /* Espacio entre los elementos */
+    margin-left: 20%;
 }
 
 .project {
@@ -515,7 +516,18 @@ body{
 @media screen and (max-width: 980px) {
     .projects {
         grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
-        gap: 15px;
+        gap: 20px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .project {
+        background-color: #f9f9f9; /* Fondo claro para contraste */
+        border-radius: 10px; /* Bordes redondeados */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        max-width: 40vh;
     }
 }
 
