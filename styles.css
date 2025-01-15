@@ -85,7 +85,7 @@ body{
     color: #ff71d0;
 }
 
-@media (min-width: 900px){
+@media (min-width: 1400px){
     .navbar{
         display:none;
     }
@@ -239,7 +239,7 @@ body{
     
 }
 
-@media (max-width: 900px){
+@media (max-width: 1400px){
     .sidebar{
         display: none;
     }
@@ -423,104 +423,111 @@ body{
     line-height: 1.6;  /* Espacio entre líneas para mejor legibilidad */
     color: #555;  /* Color de texto un poco más suave que el título */
 }
-/* Estilos generales para la sección del portafolio */
+
+@media screen and (max-width: 980px) {
+    .description {
+        padding: 20px 5%; /* Reduce el padding en pantallas más pequeñas */
+        max-width: 90%; /* Aumenta el ancho máximo en pantallas más pequeñas */
+    }
+
+    .wrapper-description {
+        padding: 15px; /* Reduce el padding interno */
+    }
+
+    .wrapper-description h2 {
+        font-size: 1.5rem; /* Reduce el tamaño de la fuente del título */
+    }
+
+    .wrapper-description p {
+        font-size: 1rem; /* Reduce el tamaño de la fuente del párrafo */
+    }
+}
+/* Estilos generales para la sección del portafolio *//* Estilos generales */
 .portfolio {
-    padding: 50px 0;
-    
-    background-size: cover;
-    align-items: flex-end;
-    margin: 0 0 0 15%;
-}
-
-.wrapper-portfolio {
-    max-width: 1200px;
+    padding: 30px 0;
     margin: 0 auto;
-    text-align: center;
+    max-width: 1200px;
 }
 
-/* Estilo para el encabezado (h2) de la sección */
 .portfolio h2 {
-    font-size: 36px;
-    font-weight: 600;
-    margin-bottom: 40px;
-    color: #f4f4f4;
-}
-
-/* Estilo para la contenedor de los proyectos */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    justify-items: center;
-}
-
-/* Estilo para cada proyecto */
-.project {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-size: 2rem;
     text-align: center;
-    padding: 20px;
-}
-
-/* Efecto hover para los proyectos */
-.project:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilo para las imágenes de los proyectos */
-.project img {
-    width: 100px;
-    height: 100px;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-/* Efecto hover en la imagen del proyecto */
-.project:hover img {
-    transform: scale(1.05);
-}
-
-/* Estilo para el título de cada proyecto */
-.project h3 {
-    font-size: 24px;
-    font-weight: 600;
-    margin-top: 15px;
+    margin-bottom: 20px;
     color: #333;
 }
 
-/* Estilo para la descripción de cada proyecto */
-.project p {
-    font-size: 16px;
-    color: #666;
-    margin-top: 10px;
-    line-height: 1.5;
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas por defecto */
+    gap: 20px; /* Espacio entre los elementos */
 }
 
-/* Estilo para los iconos de las tecnologías */
+.project {
+    background-color: #f9f9f9; /* Fondo claro para contraste */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #444;
+}
+
+.project p {
+    font-size: 1rem;
+    margin: 0 10px 15px;
+    color: #666;
+}
+
 .tech-icons {
     display: flex;
     justify-content: center;
-    gap: 15px; /* Espacio entre los iconos */
-    margin-top: 20px;
+    gap: 10px;
+    padding-bottom: 15px;
 }
 
-/* Estilo para los iconos de tecnologías */
 .tech-icons i {
-    font-size: 30px;
-    color: #333;
-    transition: transform 0.3s ease;
+    font-size: 1.5rem;
+    color: #777;
+    transition: color 0.3s ease;
 }
 
-/* Efecto hover en los iconos */
 .tech-icons i:hover {
-    transform: scale(1.2);
-    color: #0077b6; /* Cambio de color en hover */
+    color: #333;
 }
 
+/* Estilos responsivos */
+@media screen and (max-width: 980px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .projects {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .project {
+        padding: 15px;
+    }
+}
 
 /*CONTACTO*/
 /* CONTACTO */
