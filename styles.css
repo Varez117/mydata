@@ -1,0 +1,655 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: poppins,sans-serif;
+}
+
+body{
+    background-color: #000000;
+    color: #fff;
+}
+.topnav {
+    position: sticky; /* Hace que sea fija pero solo mientras está visible */
+    top: 0; /* Fija la barra en la parte superior */
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 0 15px;
+}
+
+.topnav h2{
+    color: #fff;
+    margin: 10px
+}
+
+.topnav .menu-icon{
+    color: #fff;
+    font-size: 30px;
+}
+
+.topnav .social-links i
+{
+    color: #fff;   
+    margin: 0 5px;
+}
+
+.topnav .social-links i{
+    color: #fff;
+    font-size: 25px;
+    margin: 5px;
+    transition: 0.5s;
+    transition:  transform .5s;
+}
+
+.topnav .social-links i:hover{
+    color: #ff71d0;
+    text-shadow: #ff71d0 0 0 20px;
+    transform: rotate(30deg);
+}
+
+.topnav .navbar{
+    list-style-type:none;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transform: 0.5s;
+    z-index: 9999;
+    display: none;
+}
+.topnav .navbar li{
+    margin: 8px 0 0px 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    margin-bottom: 15px;
+}
+.topnav .navbar li:last-child{
+    border: 0;
+}
+
+.topnav .navbar li a{
+    color: #fff;
+    transition: 0.5s;
+}
+
+.topnav .navbar li:hover a{
+    color: #ff71d0;
+}
+
+@media (min-width: 900px){
+    .navbar{
+        display:none;
+    }
+    .topnav{
+        display: none;
+    }
+}
+/* ######################### MAIN SECTION AND SIDEBAR ######################33*/
+.header{
+    background:linear-gradient(rgba(0,0,0,0),rgba(0, 0, 0, 1)), url(src/img/intro-bg.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.wrapper{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+.sidebar {
+    position: fixed; /* Cambia de absolute a fixed */
+    top: 0;
+    left: 0;
+    height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+    width: 240px;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+    box-shadow: #ffffff 0 0 20px;
+}
+
+.sidebar .profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sidebar .profile img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #444;
+    object-fit: contain;
+    box-sizing: 5px 7px 15px rgba(0,0,0,0.2);
+}
+
+.sidebar h2{
+    margin: 15px 0 5px 0;
+    color: #fff;
+    font-size: 24px;
+}
+.sidebar h3{
+    color: #ff71d0;
+    font-size: 18px;
+}
+.sidebar ul{
+    text-decoration: none;
+    list-style: none;
+    flex-direction: column;
+    display: flex;
+}
+.sidebar ul li{
+    margin: 7px 0;
+}
+
+.sidebar ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    transition: 0.5s;
+}
+.sidebar ul li a:after{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 110%;
+    content: "";
+    width: 0%;
+    background-color: #ff71d0;
+    transition: 0.5s;
+    height: 3px;
+}
+
+.open
+{
+    display: block!important;
+}
+
+.sidebar ul li a:hover:after{
+    margin-bottom: 1px solid #ff71d0;
+    bottom: 0;
+    width: 100%;
+}
+
+.sidebar .social i{
+    color: #fff;
+    font-size: 20px;
+    margin: 5px;
+    transition: 0.5s;
+    transition:  transform .5s;
+}
+
+.sidebar .social i:hover{
+    color: #ff71d0;
+    text-shadow: #ff71d0 0 0 20px;
+    transform: rotate(30deg);
+}
+/*######################### HERO CONTENT ###########################*/
+.hero-content{
+    margin-left: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    max-width: 700px;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.hero-content h4{
+    font-size: 24px;
+    font-weight: 400;
+}
+.hero-content h1{
+    font-size: 2.5rem;
+    margin: 25px;
+}
+
+.hero-content .btn{
+    color: #fff;
+    background-color: #0000009e;
+    border: 2px solid #ff71d0;
+    border-radius: 30px;
+    padding: 12px 35px;
+    margin: 40px 0;
+    transition: 0.3s;
+}
+
+.hero-content .btn:hover{
+    color: #111;
+    background-color: #ff71d0;
+}
+
+.hero-content .input {
+    color: #ff71d0;
+    
+}
+
+@media (max-width: 900px){
+    .sidebar{
+        display: none;
+    }
+    .hero-content{
+        margin-left: 10px;
+    }
+    .hero-content h1{
+        font-size: 2rem;
+    }
+}
+
+/* Estilo principal para el div "about" *//* Estilos para la sección Acerca de mí */
+.about {
+    background-color: #f4f4f4;
+    padding: 50px 0 50px 10%;
+    text-align: left;
+    margin: auto;
+}
+
+.wrapper-about {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.about .wrapper-about {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Estilo de la sección de habilidades */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+/* Estilo de la sección de habilidades */
+.column ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    flex-direction: row;  /* Cambié de column a row para que los elementos estén en fila */
+    gap: 30px;  /* Añadí un espacio entre los elementos */
+}
+
+/* El resto del código puede mantenerse igual */
+.column ul li {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+
+.column ul li::before {
+    content: "▰ ";
+    color: #329cb1; /* Un color llamativo */
+    flex-direction: column; 
+    transition: color 0.3s ease;
+
+}
+.column ul li:hover::before {
+    content: "▰ ";
+    color: #ff71d0; /* Cambia el color al pasar el ratón */
+    flex-direction: column;
+}
+
+
+/* Estilo de la sección de intereses */
+.col {
+    text-align: left;
+}
+
+.about .wrapper-about h4 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contenedor-intereses {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.interes {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100px; /* Ancho fijo */
+    height: 100px; /* Alto fijo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.interes:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.interes i {
+    font-size: 2rem;
+    color: #329cb1; /* Color llamativo para los íconos */
+    transition: color 0.3s ease;
+}
+
+.interes:hover i {
+    color: #ff71d0; /* Cambia el color al pasar el ratón */
+}
+
+.interes span {
+    display: block;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contenedor-intereses {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Estilos para la sección Descripción */
+.description {
+    padding: 20px 0 20px 10%; /* Agrega un poco de espacio interno */
+    background-color: #f4f4f4;  /* Fondo suave */
+    border-radius: 8px;  /* Bordes redondeados */
+    margin: 30px 0;  /* Margen alrededor de la sección */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 70%;  /* Sombra suave para dar profundidad */
+}
+
+.wrapper-description {
+    max-width: 700px;  /* Limita el ancho de la descripción */
+    margin: 30px auto;  /* Centra el contenido */
+    padding: 20px;
+}
+
+.wrapper-description h2 {
+    font-size: 2rem;  /* Tamaño grande para el título */
+    color: #333;  /* Color oscuro para el título */
+    margin-bottom: 15px;  /* Espacio debajo del título */
+    font-weight: 600;  /* Peso de fuente semi-negrita */
+}
+
+.wrapper-description p {
+    font-size: 1.1rem;  /* Tamaño de fuente para el párrafo */
+    line-height: 1.6;  /* Espacio entre líneas para mejor legibilidad */
+    color: #555;  /* Color de texto un poco más suave que el título */
+}
+/* Estilos generales para la sección del portafolio */
+.portfolio {
+    padding: 50px 0;
+    
+    background-size: cover;
+    align-items: flex-end;
+    margin: 0 0 0 15%;
+}
+
+.wrapper-portfolio {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Estilo para el encabezado (h2) de la sección */
+.portfolio h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #f4f4f4;
+}
+
+/* Estilo para la contenedor de los proyectos */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Estilo para cada proyecto */
+.project {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Efecto hover para los proyectos */
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para las imágenes de los proyectos */
+.project img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover en la imagen del proyecto */
+.project:hover img {
+    transform: scale(1.05);
+}
+
+/* Estilo para el título de cada proyecto */
+.project h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 15px;
+    color: #333;
+}
+
+/* Estilo para la descripción de cada proyecto */
+.project p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* Estilo para los iconos de las tecnologías */
+.tech-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espacio entre los iconos */
+    margin-top: 20px;
+}
+
+/* Estilo para los iconos de tecnologías */
+.tech-icons i {
+    font-size: 30px;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover en los iconos */
+.tech-icons i:hover {
+    transform: scale(1.2);
+    color: #0077b6; /* Cambio de color en hover */
+}
+
+
+/*CONTACTO*/
+/* CONTACTO */
+.contacto {
+    background-image: url(src/img/contact_bg.png);
+    background-color: #000000;
+    color: #fff;
+    padding: 50px 0;
+    background-size: cover;
+    align-items: flex-end;
+    margin: 0 0 0 15%;
+}
+
+.contacto .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Estilo para el encabezado (h2) de la sección */
+.contacto h2 {
+    font-size: 48px;
+    font-weight: 600;
+    padding: 20px 0px;
+    color: #f4f4f4;
+}
+
+/* Estilo para las filas */
+.contacto .fila {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilo para las columnas */
+.contacto .col {
+    width: 48%;
+    padding: 10px;
+    position: relative;
+}
+
+/* Estilo para los inputs y textarea */
+.contacto .col input, .contacto .col textarea {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #f4f4f4;
+    color: #111;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover en los inputs y textarea */
+.contacto .col input:hover, .contacto .col textarea:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para el botón */
+.contacto button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+
+/* Estilo para la capa de overlay del botón */
+.contacto button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ff71d0;
+    z-index: -1;
+    transition: width 0.7s ease;
+}
+
+/* Efecto hover sobre el overlay del botón */
+.contacto button:hover .overlay {
+    width: 100%;
+}
+
+/* Estilo para la imagen en las columnas */
+.contacto .col img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover en la imagen */
+.contacto .col img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para la información en la columna */
+.contacto .col .info {
+    position: absolute;
+    top: 40%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    max-width: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #111;
+}
+
+/* Estilo para las listas dentro de la información */
+.contacto .col .info ul {
+    list-style: none;
+}
+
+/* Estilo para cada elemento de la lista dentro de la información */
+.contacto .col .info ul li {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Estilo para los iconos dentro de la información */
+.contacto .col .info ul li i {
+    color: #0077b6;
+    display: inline-block;
+    margin-right: 5px;
+    text-align: left;
+}

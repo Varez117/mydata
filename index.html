@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<title>Varez New</title>
+<body>
+    <div class="topnav">
+        <div class="logo">
+            <h2>Varez</h2>
+        </div>
+        <div class="social-links">
+            <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.github.com"><i class="fab fa-github"></i></a>
+            <a href="https://wa.me/yourphonenumber"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="menu-icon">
+            <i class="fa fa-bars"></i>
+        </div>
+        <ul class="navbar">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="header">
+        <div class="wrapper">
+            <div class="sidebar">
+                <div class="profile">
+                    <img src="src/img/icon_profile.jpeg" alt="" width="150" height="150">
+                    <h2>Christo Álvarez</h2>
+                </div>
+                <ul class="nav">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="social">
+                    <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.github.com"><i class="fab fa-github"></i></a>
+                    <a href="https://wa.me/yourphonenumber"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="hero-content" id="home">
+                <h4>Bienvenido(a)</h4>
+                <h1>Soy <span class="input" ></span></h1>
+                <h4>Estudiante del TECNM - Apizaco</h4>
+                <h3>Ing. Tecnologías de la información y comunicación</h3>
+                <a href="" class="btn">Contáctame</a>
+            </div>
+        </div>
+    </div>
+    <!-- TYPING MODE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js" integrity="sha512-tQQXRDB2wEmuJGtFrmmoFYzNTq8StA1XJrfO0OQbbTxd9G0CwaTDL6/C1y805IlvBVrMwOqob1kf6r/2U5XXVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var typed = new Typed('.input', {
+            strings: ['Christo Álvarez', 'Backend Developer', 'Database manager',' UI/UX Designer','Begginer Web Developer'],
+            typeSpeed: 40,
+            backSpeed: 40,
+            loop: true
+        });
+        let menuicon=document.querySelector('.menu-icon');
+        let navbar=document.querySelector('.navbar');
+        let icon=document.querySelector('.menu-icon i');
+
+        menuicon.addEventListener('click',function(){
+            navbar.classList.toggle('open');
+            if(navbar.classList.contains('open')){
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark'); 
+            }else{
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+    <div class="about" id="about">
+        <div class="wrapper-about">
+            <h2>Acerca de mi</h2>
+            <div class="content">
+                <div class="column">
+                    <ul>
+                        <li>Comunicación</li>
+                        <li>Trabajo en equipo</li>
+                        <li>Adaptabilidad</li>
+                        <li>Resolución de problemas</li>
+                        <li>Liderazgo</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <h4>Interses personales</h4>
+                <div class="contenedor-intereses">
+                    <div class="interes">
+                        <i class="fa-solid fa-gamepad"></i>
+                        <span>Juegos</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-headphones"></i>
+                        <span>Música</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-plane"></i>
+                        <span>Viajar</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-brands fa-windows"></i>
+                        <span>Windows</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-person-hiking"></i>
+                        <span>Deporte</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-book"></i>
+                        <span>Lectura</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-car"></i>
+                        <span>Autos</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-utensils"></i>
+                        <span>Cocinar</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="description" id="description">
+            <div class="wrapper-description">
+                <h2>Descripción</h2>
+                <p>Hola, soy Christo Álvarez, estudiante de ingeniería, actualmente dentro del Instituto Tecnológico Nacional de México, campus Apizaco. Durante mi formación académica, he podido ser partícipe de pequeños y grandes proyectos, así como familiarizarme y trabajar en equipo como de manera independiente. Me considero una persona capaz de trabajar en distintos ambientes y con diferentes personas de manera satisfactoria. Siempre mantengo un carácter de iniciativa, buscando innovar y cumplir con lo que se me solicita.</p>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio" id="portfolio">
+        <div class="wrapper-portfolio">
+            <h2>Portafolio</h2>
+            <div class="projects">
+                <div class="project">
+                    <img src="src/img/project1.jpg" alt="Project 1">
+                    <h3>Proyecto 1</h3>
+                    <p>Descripción del proyecto 1.</p>
+                    <div class="tech-icons">
+                        <i class="fab fa-python"></i>
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="src/img/project2.jpg" alt="Project 2">
+                    <h3>Proyecto 2</h3>
+                    <p>Descripción del proyecto 2.</p>
+                    <div class="tech-icons">
+                        <i class="fab fa-js"></i>
+                        <i class="fab fa-react"></i>
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="src/img/project3.jpg" alt="Project 3">
+                    <h3>Proyecto 3</h3>
+                    <p>Descripción del proyecto 3.</p>
+                    <div class="tech-icons">
+                        <i class="fab fa-java"></i>
+                        <i class="fab fa-spring"></i>
+                        <i class="fab fa-aws"></i>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="src/img/project4.jpg" alt="Project 4">
+                    <h3>Proyecto 4</h3>
+                    <p>Descripción del proyecto 4.</p>
+                    <div class="tech-icons">
+                        <i class="fab fa-angular"></i>
+                        <i class="fab fa-sass"></i>
+                        <i class="fab fa-docker"></i>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="src/img/project5.jpg" alt="Project 5">
+                    <h3>Proyecto 5</h3>
+                    <p>Descripción del proyecto 5.</p>
+                    <div class="tech-icons">
+                        <i class="fab fa-vuejs"></i>
+                        <i class="fab fa-laravel"></i>
+                        <i class="fab fa-mysql"></i>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="src/img/project6.jpg" alt="Project 6">
+                    <h3>Proyecto 6</h3>
+                    <p>Descripción del proyecto 6.</p>
+                    <div class="tech-icons">
+                        <i class="fab fa-php"></i>
+                        <i class="fab fa-bootstrap"></i>
+                        <i class="fab fa-git"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>Contacto</h2>
+            <div class="fila">
+                <!--formulario-->
+                <div class="col">
+                    <form action="https://formspree.io/f/xrgvneeo" method="post">
+                        <input type="text" name="Nombre" placeholder="Nombre" required>
+                        <input type="tel" name="Número celular" placeholder="Número celular" required>
+                        <input type="email" name="email" placeholder="Correo electrónico" required>
+                        <input type="text" name="Motivo" placeholder="Motivo" required>
+                        <textarea name="message" cols="30" rows="10" placeholder="Mensaje" required></textarea>
+                        <button type="submit">
+                            Enviar <i class="fa-solid fa-paper-plane"></i>
+                            <span class="overlay"></span>
+                        </button>
+                    </form>
+                </div>
+                <!--MAPA-->
+                <div class="col">
+                    <img src="src/img/ubicacion.png" alt="">
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Tlaxcala, Tlaxcala, 90491.
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                Contacto: +52 52-241-407-3434
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Correo: musicianrz21@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
