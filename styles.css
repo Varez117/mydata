@@ -280,7 +280,7 @@ body{
         margin: 10px 0 0 10%;
     }
 }
-@media (max-width: 900px){
+@media (max-width: 1399px){
     .profile-hide{
         display: block;
         text-align: center;
