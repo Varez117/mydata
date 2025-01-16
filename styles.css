@@ -140,8 +140,7 @@ body{
 .sidebar .profile img{
     width: 150px;
     height: 150px;
-    border-radius: 50%;
-    border: 5px solid #444;
+    
     object-fit: contain;
     box-sizing: 5px 7px 15px rgba(0,0,0,0.2);
 }
@@ -254,6 +253,7 @@ body{
     
 }
 
+
 @media (max-width: 1400px){
     .sidebar{
         display: none;
@@ -265,6 +265,14 @@ body{
         font-size: 2rem;
     }
 }
+.profile-hide{
+    display: none;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 30px;
+    object-fit: contain;
+    box-sizing: 5px 7px 15px rgba(0,0,0,0.2);
+}
 
 @media (max-width: 480px){
     .hero-content h3{
@@ -272,7 +280,13 @@ body{
         margin: 10px 0 0 10%;
     }
 }
-
+@media (max-width: 900px){
+    .profile-hide{
+        display: block;
+        text-align: center;
+    }
+    
+}
 /* Estilo principal para el div "about" *//* Estilos para la sección Acerca de mí */
 .about {
     background-color: #f4f4f4;
@@ -470,13 +484,13 @@ body{
     }
     .column ul {
         gap: 2px;
-        margin-left: -40%;
+        margin-left: -25%;
         margin-top: 20px;
-        font-size: 1rem;
+        font-size: 1.2rem;
         flex-direction: column;
     }
     .column ul li {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
         margin: 5px 0;
     }
 }
@@ -558,7 +572,8 @@ body{
     font-size: 2rem;
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    margin-left: 20%;
+    color: #f4f4f4;
 }
 
 .projects {
