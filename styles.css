@@ -598,8 +598,10 @@ body{
 }
 
 .project img {
-    width: 100%;
-    height: auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+
     border-bottom: 1px solid #ddd;
 }
 
@@ -649,6 +651,14 @@ body{
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         max-width: 40vh;
     }
+    
+    .portfolio h2 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-left: -0%;
+        color: #f4f4f4;
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -667,6 +677,14 @@ body{
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         max-width: 40vh;
     }
+    
+    .portfolio h2 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-left: 0%;
+        color: #f4f4f4;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -677,6 +695,13 @@ body{
 
     .project {
         padding: 15px;
+    }
+    .portfolio h2 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-left: -6%;
+        color: #f4f4f4;
     }
 }
 
